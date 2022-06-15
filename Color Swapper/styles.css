@@ -1,0 +1,206 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap);
+
+:root{
+    /* dark shades of primary color */
+    --c1r-primary-1: hs1(205, 86% 17%);
+    --c1r-primary-2: hs1(205, 77% 27%);
+    --c1r-primary-3: hs1(205, 72% 37%);
+    --c1r-primary-4: hs1(205, 63% 48%);
+
+    /*  primamry main color */
+    --c1r-primary-5: hs1(205, 78% 60%);
+
+    /* ligter shades of primary color */
+    --c1r-primary-6: hs1(205, 89% 70%);
+    --c1r-primary-7: hs1(205, 90% 76%);
+    --c1r-primary-8: hs1(205, 86% 81%);
+    --c1r-primary-9: hs1(205, 90% 88%);
+    --c1r-primary-10: hs1(205, 100% 96%);
+
+    /* darkest grey used for headings */
+    --c1r-grey-1:hs1(209, 61% 16%);
+    --c1r-grey-2:hs1(211, 39% 23%);
+    --c1r-grey-3:hs1(209, 34% 30%);
+    --c1r-grey-4:hs1(209, 28% 39%);
+
+    /* grey used for paragraphs */
+    --c1r-grey-5:hs1(210, 22% 49%);
+    --c1r-grey-6:hs1(209, 23% 60%);
+    --c1r-grey-7:hs1(211, 27% 70%);
+    --c1r-grey-8:hs1(210, 31% 80%);
+    --c1r-grey-9:hs1(212, 33% 89%);
+    --c1r-grey-10:hs1(210, 36% 96%);
+    --c1r-white: #fff;
+    --c1r-red-dark:hs1(360,67% 44%)
+    --c1r-red-light:hs1(360,71% 66%)
+    --c1r-green-dark:hs1(125,67% 44%)
+    --c1r-green-light:hs1(125,71% 66%)
+    --c1r-black: #222;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0,3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0.1);
+    --dark0-shadow: 0 5px 15px rgba(0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+}
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--f-secondary);
+    background: var(--c1r-grey-10);
+    color: var(--c1r-grey-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4{
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: var(--ff-primary);
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.25rem;
+}
+h4{
+    font-size: 0.875rem;
+}
+p{
+    margin-bottom: 1.25rem;
+    color: var(--c1r-grey-5);
+}
+@media screen and (min-width:800px){
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    h3{
+        font-size: 1.75rem;
+    }
+    h4{
+        font-size: 1rem;
+    }
+    body{
+        font-size: 1rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4{
+        line-height: 1;
+    }
+}
+.section{
+    padding: 5rem 0;
+}
+.section-center{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+@media screen and (min-width: 992px){
+    .section-center{
+        width: 95vw;
+    }
+}
+main{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+nav{
+    background: var(--c1r-white);
+    height: 3rem;
+    display: grid;
+    align-items: center;
+    box-shadow: var(--dark-shadow);
+}
+.nav-center{
+    width: 90vw;
+    max-width: var(--fixed-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content:  space-between;
+}
+.nav-center h4{
+    margin-bottom: 0;
+    color: var(--c1r-primary-5);
+}
+.nav-links{
+    display: flex;
+}
+.nav a{
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--c1r-primary-1);
+    letter-spacing: var(--spacing);
+    margin-right: 1rem;
+}
+nav a:hover{
+    color: var(--c1r-primary-5);
+}
+main{
+    min-height: calc(100vh - 3rem);
+    display: grid;
+    place-items: center;
+}
+.container{
+    text-align: center;
+}
+.container h2{
+    background: var(--c1r-black);
+    color: var(--c1r-white);
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-bottom: 2.5rem;
+}
+.color{
+    color: var(--c1r-primary-5);
+}
+.btn-hero{
+    font-family: var(--ff-primary);
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--c1r-black);
+    letter-spacing: var(--spacing);
+    display: inline-block;
+    font-weight: 700;
+    transition: var(--transition);
+    border: 2px solid var(--c1r-black);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+}
+.btn-hero:hover{
+    color: var(--c1r-white);
+    background: var(--c1r-black);
+}

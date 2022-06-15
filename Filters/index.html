@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> Filters </title>
+
+        <!--styles-->
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!--products-->
+        <section class="products">
+            <!--filters-->
+            <div class="filters-container">
+                <!--search-->
+                <form class="input-form">
+                    <input type="text" class="search-input" placeholder="search..." />
+                </form>
+                <!--categories-->
+                <h5> Company </h5>
+                <article class="compnanies">
+                    <button class="company-btn"> All </button>
+                    <button class="compnay-btn"> IKEA </button> 
+                    <button class="compnay-btn"> Marcos </button>
+                </article>
+            </div>
+            <!--products-->
+            <div class="products-container">
+                <!-- single product -->
+                <article class="product">
+                    <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c29mYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" class="product-img img" alt="" />
+                    <footer>
+                        <h5 class="product-name"> Couch </h5>
+                        <span class="product-price"> $109.99 </span>
+                    </footer>
+                </article>
+            </div>
+        </section>
+        <script src="./product.js"></script>
+        <script src="./app.js"></script>
+    </body>
+</html>
